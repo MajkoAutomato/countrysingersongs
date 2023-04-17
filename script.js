@@ -22,4 +22,10 @@ const searchengine = e => {
   })
 };
 
-  search.addEventListener('keyup', searchengine) 
+search.addEventListener('keyup', searchengine) 
+
+countrysingers.forEach(cs => {
+  name = cs.textContent
+  query_name = name.toLowerCase().replace(' ', '+')
+  cs.innerHTML = '<a href="https://www.youtube.com/results?search_query='+query_name+'" target="_blank">'+name+'</a>'
+})
